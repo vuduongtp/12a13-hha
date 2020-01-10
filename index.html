@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> 12A13 - Thanh xuân của chúng ta</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="1.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="1.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body >
+
+	<script type="text/javascript">
+		window.onload = function() {
+		  // Month Day, Year Hour:Minute:Second, id-of-element-container
+		  countUpFromTime("Jun 1, 2016 00:00:00", 'countup1'); // ****** Change this line!
+		};
+		function countUpFromTime(countFrom, id) {
+		  countFrom = new Date(countFrom).getTime();
+		  var now = new Date(),
+		      countFrom = new Date(countFrom),
+		      timeDifference = (now - countFrom);
+		    
+		  var secondsInADay = 60 * 60 * 1000 * 24,
+		      secondsInAHour = 60 * 60 * 1000;
+		    
+		  days = Math.floor(timeDifference / (secondsInADay) * 1);
+		  years = Math.floor(days / 365);
+		  if (years > 1){ days = days - (years * 365) }
+		  hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+		  mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+		  secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+		  var idEl = document.getElementById(id);
+		  idEl.getElementsByClassName('years')[0].innerHTML = years;
+		  idEl.getElementsByClassName('days')[0].innerHTML = days;
+		  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+		  idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+		  idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+		  clearTimeout(countUpFromTime.interval);
+		  countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+		}
+	</script>
+	
+	<style>
+		.countup {
+		  text-align: center;
+		  margin-bottom: 20px;
+		}
+		.countup .timeel {
+		  display: inline-block;
+		  padding: 10px;
+		  background: #151515;
+		  margin: 0;
+		  color: white;
+		  min-width: 2.6rem;
+		  margin-left: 13px;
+		  border-radius: 10px 0 0 10px;
+		}
+		.countup span[class*="timeRef"] {
+		  border-radius: 0 10px 10px 0;
+		  margin-left: 0;
+		  background: #e8c152;
+		  color: black;
+		}
+	</style>
+
+
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+	 	<div class="container" >
+	 		<!-- Brand and toggle get grouped for better mobile display -->
+	 		<div class="navbar-header">
+	 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	 				<span class="sr-only">Toggle navigation</span>
+	 				<span class="icon-bar"></span>
+	 				<span class="icon-bar"></span>
+	 				<span class="icon-bar"></span>
+	 			</button>
+	 			<a class="navbar-brand" href="index.html" style="font-family: 'Lobster', cursive;font-size: 32px;">12A13</a>
+	 		</div>
+	 
+	 		<!-- Collect the nav links, forms, and other content for toggling -->
+	 		<div class="collapse navbar-collapse navbar-ex1-collapse">
+	 			<ul class="nav navbar-nav">
+	 				<li class="active"><a href="index.html">Liên hệ</a></li>
+	 				<li><a href="date.html">Danh sách</a></li>
+	 				<li><a href="album.html">Album ảnh</a></li>
+	 				<li><a href="http://thpt-ahaihau.namdinh.edu.vn/">Web trường</a></li>
+	 			</ul>
+
+	 			
+	 		</div><!-- /.navbar-collapse -->
+	 	</div>
+	 </nav> 
+
+	 <div class="container" style="background-color: lavender">
+	 	<div class="row">
+	 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+	 			<h2 class="text-center" style="font-family: 'Lobster', cursive;font-size: 40px;color: #b197ca;">12A13-HHA-K53</h2>
+	 			<ul class="list-group">
+	 				<li class="list-group-item"><a href="#1">1. Trần Thị Thu Ánh</a></li>
+	 				<li class="list-group-item"><a href="#1">2. Trần Thị Diện</a></li>
+					<li class="list-group-item"><a href="#2">3. Phạm Thị Dịu</a></li>
+					<li class="list-group-item"><a href="#3">4. Lương Thị Duyên</a></li>
+					<li class="list-group-item"><a href="#4">5. Vũ Văn Dương</a></li>
+					<li class="list-group-item"><a href="#5">6. Phạm Thị Hương Giang</a></li>
+					<li class="list-group-item"><a href="#6">7. Phạm Thị Thuý Hằng</a></li>
+					<li class="list-group-item"><a href="#8">8. Nguyễn Thanh Hiền</a></li>
+					<li class="list-group-item"><a href="#9">9. Mai Thị Hiền</a></li>
+					<li class="list-group-item"><a href="#10">10. Nguyễn Thị Hiền</a></li>
+					<li class="list-group-item"><a href="#11">11. Lương Thị Hoa </a></li>
+					<li class="list-group-item"><a href="#12">12. Vũ Thị Hoa</a></li>
+					<li class="list-group-item"><a href="#13">13. Đỗ Thị Hòa</a></li>
+					<li class="list-group-item"><a href="#14">14. Đinh Thị Thu Hòa </a></li>
+					<li class="list-group-item"><a href="#15">15. Trần Thị Diệu Huế</a></li>
+					<li class="list-group-item"><a href="#16">16. Ngô Thị Huyền</a></li>
+					<li class="list-group-item"><a href="#17">17. Nguyễn Thị Lan Hương</a></li>
+					<li class="list-group-item"><a href="#18">18. Nguyễn Thu Hường</a></li>
+					<li class="list-group-item"><a href="#19">19. Phạm Thu Hường</a></li>
+					<li class="list-group-item"><a href="#20">20. Lại Thị Kính</a></li>
+					<li class="list-group-item"><a href="#21">21. Trần Thị Bích Liên</a></li>
+					<li class="list-group-item"><a href="#22">22. Phạm Thùy Linh</a></li>
+					<li class="list-group-item"><a href="#23">23. Vũ Thùy Linh</a></li>
+					<li class="list-group-item"><a href="#24">24. Nguyễn Thị Kim Loan</a></li>
+					<li class="list-group-item"><a href="#25">25. Nguyễn Thị Lụa</a></li>
+					<li class="list-group-item"><a href="#26">26. Nguyễn Thị Ly Ly</a></li>
+					<li class="list-group-item"><a href="#27">27. Phạm Thị Lý</a></li>
+					<li class="list-group-item"><a href="#28">28. Phạm Thị Thanh Mai</a></li>
+					<li class="list-group-item"><a href="#29">29. Nguyễn Thị Ngọc</a></li>
+					<li class="list-group-item"><a href="#30">30. Lại Thị Mến</a></li>
+					<li class="list-group-item"><a href="#31">31. Trần Sơn Nguyệt</a></li>
+					<li class="list-group-item"><a href="#32">32. Nguyễn Thị Nhài</a></li>
+					<li class="list-group-item"><a href="#33">33. Nguyễn Thảo Nhi</a></li>
+					<li class="list-group-item"><a href="#34">34. Trần Thị Sâm Nhung</a></li>
+					<li class="list-group-item"><a href="#35">35. Trần Thị Tuyết Nhung</a></li>
+					<li class="list-group-item"><a href="#36">36. Trần Tiến Phát</a></li>
+					<li class="list-group-item"><a href="#37">37. Mai Đình Phước</a></li>
+					<li class="list-group-item"><a href="#38">38. Trần Thị Thuý Quỳnh</a></li>
+					<li class="list-group-item"><a href="#39">39. Vũ Thị Hoài Thu</a></li>
+					<li class="list-group-item"><a href="#40">40. Đỗ Thị Thủy</a></li>
+					<li class="list-group-item"><a href="#41">41. Nguyễn Thị Thu Trang</a></li>
+					<li class="list-group-item"><a href="#42">42. Trần Thị Trúc</a></li>
+					<li class="list-group-item"><a href="#43">43. Ngô Ánh Tuyết</a></li>
+					<li class="list-group-item"><a href="#44">44. Phạm Tố Uyên</a></li>
+	 			</ul>
+	 			
+	 		</div>
+
+
+	 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="background-color: #F5F5DC">
+	 			<div class="row text-center demthoigian" style="background-color: #ffdce2;">
+	 				<h3 class="textdemthoigian" style="color: #ff000040;font-family: 'Patrick Hand';">CHÚNG TA ĐÃ TỐT NGHIỆP ĐƯỢC</h3>
+	 				<div class="countup" id="countup1">
+						  <span class="timeel years">00</span>
+						  <span class="timeel timeRefYears">năm</span>
+						  <span class="timeel days">00</span>
+						  <span class="timeel timeRefDays">ngày</span>
+						  <span class="timeel hours">00</span>
+						  <span class="timeel timeRefHours">giờ</span>
+						  <span class="timeel minutes">00</span>
+						  <span class="timeel timeRefMinutes">phút</span>
+						  <span class="timeel seconds">00</span>
+						  <span class="timeel timeRefSeconds">giây</span>
+					</div>
+	 				
+	 			</div>
+	 			<!-- <div id="carousel-id" class="carousel slide" data-ride="carousel">
+	 				<ol class="carousel-indicators">
+	 					<li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+	 					<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+	 					<li data-target="#carousel-id" data-slide-to="1" class=""></li>					
+	 					<li data-target="#carousel-id" data-slide-to="2" class=""></li>
+	 				</ol>
+	 				<div class="carousel-inner">
+	 					<div class="item active">
+	 						<img src="image/IMG_2393.JPG" loading="lazy">
+	 						
+	 					</div>
+	 					<div class="item">
+	 						<img src="image/IMG_2393.JPG" loading="lazy">
+	 						
+	 					</div>
+	 					<div class="item ">
+	 						<img  src="image/IMG_2393.JPG" loading="lazy">
+	 						
+	 					</div>
+	 					<div class="item ">
+	 						<img src="image/IMG_2393.JPG" loading="lazy">
+	 						
+	 					</div>
+	 				</div>
+	 				<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	 				<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	 			</div>end slide anh -->
+	 				<hr>
+	 				<div class="text-center">
+	 					<h3 style="color: #ff000040;font-family: 'Patrick Hand';">THÔNG TIN LIÊN HỆ</h3>
+	 				</div>
+	 				<hr>
+	 				<div class="text-center">
+						<div class="row">
+							<div id="1" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img  class="img-responsive anhtieude" src="image/1.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">1.Trần Thị Thu Ánh</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+
+	 						<div id="2" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/2.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">2.Trần Thị Diện</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="3" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/3.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">3.Phạm Thị Dịu</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="4" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/4.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">4.Lương Thị Duyên</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="5" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/5.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">5.Vũ Văn Dương</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="https://www.facebook.com/vuvan.duong.718" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: 0337849696')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="6" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/6.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">6.Phạm Thị Hương Giang</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="7" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/7.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">7.Phạm Thị Thuý Hằng</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="8" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/8.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">8.Nguyễn Thanh Hiền</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="9" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/9.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">9.Mai Thị Hiền</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="10" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/10.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">10.Nguyễn Thị Hiền</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="11" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/11.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">11.Lương Thị Hoa</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="12" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/12.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">12.Vũ Thị Hoa</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="13" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/13.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">13.Đỗ Thị Hòa</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="14" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/14.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">14.Đinh Thị Thu Hòa</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="15" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/15.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">15.Trần Thị Diệu Huế</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="16" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/16.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">16.Ngô Thị Huyền</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="17" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/17.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">17.Nguyễn Thị Lan Hương</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="18" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/18.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">18.Nguyễn Thu Hường</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="19" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/19.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">19.Phạm Thu Hường</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="20" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/20.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">20.Lại Thị Kính</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="21" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/21.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">21.Trần Thị Bích Liên</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="22" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/22.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">22.Phạm Thùy Linh</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="23" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/23.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">23.Vũ Thùy Linh</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="24" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/24.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">24.Nguyễn Thị Kim Loan</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="25" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/25.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">25.Nguyễn Thị Lụa</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="26" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/26.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">26.Nguyễn Thị Ly Ly</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="27" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/27.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">27.Phạm Thị Lý</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="28" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/28.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">28.Phạm Thị Thanh Mai</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="29" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/29.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">29.Nguyễn Thị Ngọc</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="30" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/30.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">30.Lại Thị Mến</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="31" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/31.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">31.Trần Sơn Nguyệt</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="32" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/32.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">32.Nguyễn Thị Nhài</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="33" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/33.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">33.Nguyễn Thảo Nhi</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="34" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/34.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">34.Trần Thị Sâm Nhung</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="35" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/35.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">35.Trần Thị Tuyết Nhung</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="36" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/36.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">36.Trần Tiến Phát</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="37" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/37.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">37.Mai Đình Phước</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="38" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/38.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">38.Trần Thị Thuý Quỳnh</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="39" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/39.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">39.Vũ Thị Hoài Thu</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="40" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/40.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">40.Đỗ Thị Thủy</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+	 					</div>
+	 					<div class="row">
+							<div id="41" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/41.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">41.Nguyễn Thị Thu Trang</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="42" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/42.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">42.Trần Thị Trúc</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="43" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/43.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">43.Ngô Ánh Tuyết</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+							<div id="44" class="col-md-3">
+	 							<div class="thumbnail">
+	 								<img class="img-responsive anhtieude" src="image/44.jpg" alt="" loading="lazy">
+	 								<div class="caption">
+	 									<h4 class="hoten">44.Phạm Tố Uyên</h4>
+	 									<div class="lienhe">
+	 										<a class="btn btn-primary" href="" style="margin-top: 5px;"><i class="fa fa-facebook-square"></i> Facebook</a>
+	 										<button onclick="alert('Số điện thoại: ')"; class="btn btn-warning" style="padding: 6px 24px;margin-top: 5px;"><i class="fa fa-phone"></i> Phone</button>
+	 									</div>
+
+	 								</div>
+	 							</div>
+	 						</div><!-- end cot 4 -->
+						</div>	
+	 					
+	 				</div>
+	 		</div> <!-- end cot 9 -->
+	 	</div><!-- end row -->
+	 </div><!-- end container -->
+	 
+	<div><hr></div>
+    <div class="text-center container-fluid" style="background-color: #f5f5dc;">
+    	<h3 class="text-center" style="font-family: 'Lobster', cursive;font-size: 40px;color: #ce7388;">12A13-HHA-K53</h3>
+    	<div><h4>© 2019 - Bản quyền thuộc về <a href="https://www.facebook.com/vuvan.duong.718">Vũ Dương</a></h4></div>
+    </div>
+	
+</body>
+</html>

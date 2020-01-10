@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title> 12A13 - Danh sách lớp</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="1.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="1.css">
+ 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body >
+
+	<script type="text/javascript">
+		// Set the date we're counting down to
+		var countDownDate = new Date("Jan 25, 2020 00:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+		  // Get today's date and time
+		  var now = new Date().getTime();
+		    
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+		    
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		    
+		  // Output the result in an element with id="demo"
+		  var idEl = document.getElementById("demo");
+		  idEl.getElementsByClassName('days')[0].innerHTML = days;
+		  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+		  idEl.getElementsByClassName('minutes')[0].innerHTML = minutes;
+		  idEl.getElementsByClassName('seconds')[0].innerHTML = seconds;
+		    
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+	</script>
+	
+	<style>
+		.countup {
+		  text-align: center;
+		  margin-bottom: 20px;
+		}
+		.countup .timeel {
+		  display: inline-block;
+		  padding: 10px;
+		  background: #151515;
+		  margin: 0;
+		  color: white;
+		  min-width: 2.6rem;
+		  margin-left: 13px;
+		  border-radius: 10px 0 0 10px;
+		}
+		.countup span[class*="timeRef"] {
+		  border-radius: 0 10px 10px 0;
+		  margin-left: 0;
+		  background: #e8c152;
+		  color: black;
+		}
+	</style>
+
+
+	<nav class="navbar navbar-default navbar-inverse" role="navigation">
+	 	<div class="container" >
+	 		<!-- Brand and toggle get grouped for better mobile display -->
+	 		<div class="navbar-header">
+	 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	 				<span class="sr-only">Toggle navigation</span>
+	 				<span class="icon-bar"></span>
+	 				<span class="icon-bar"></span>
+	 				<span class="icon-bar"></span>
+	 			</button>
+	 			<a class="navbar-brand" href="index.html" style="font-family: 'Lobster', cursive;font-size: 32px;">12A13</a>
+	 		</div>
+	 
+	 		<!-- Collect the nav links, forms, and other content for toggling -->
+	 		<div class="collapse navbar-collapse navbar-ex1-collapse">
+	 			<ul class="nav navbar-nav">
+	 				<li><a href="index.html">Liên hệ</a></li>
+	 				<li class="active"><a href="date.html">Danh sách</a></li>
+	 				<li><a href="album.html">Album ảnh</a></li>
+	 				<li><a href="http://thpt-ahaihau.namdinh.edu.vn/">Web trường</a></li>
+	 			</ul>
+
+	 			
+	 		</div><!-- /.navbar-collapse -->
+	 	</div>
+	 </nav> 
+
+	 <div class="container">
+	 	<div class="row text-center demthoigian" style="background-color: #f7f7f7;">
+	 				<h3 class="textdemthoigian" style="color: #ff000040;font-family: 'Patrick Hand';">ĐẾM NGƯỢC ĐẾN TẾT</h3>
+	 				<div class="countup" id="demo">
+						  <span class="timeel days">00</span>
+						  <span class="timeel timeRefDays">ngày</span>
+						  <span class="timeel hours">00</span>
+						  <span class="timeel timeRefHours">giờ</span>
+						  <span class="timeel minutes">00</span>
+						  <span class="timeel timeRefMinutes">phút</span>
+						  <span class="timeel seconds">00</span>
+						  <span class="timeel timeRefSeconds">giây</span>
+					</div>
+	 				
+	 			</div>
+	 </div>
+	<div><hr></div>
+
+	<div class="container father" style="background-color: #ece1e3;">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-push-3">
+				<h3 class="text-center jumbotron" style="color: #ff000040;font-family: 'Patrick Hand';">
+					Danh sách này mình đã sắp xếp theo thứ tự ngày sinh tăng dần. Mọi người nhớ chúc mừng sinh nhật nhau nhé!
+				</h3>
+
+				<table class="table " cellspacing=0 border=1 class="bang ">
+					<tr class="tieude text-center">
+						<td style=min-width:50px>Xếp hạng</td>
+						<td style=min-width:50px>STT</td>
+						<td style=min-width:50px>Họ và </td>
+						<td style=min-width:50px>Tên</td>
+						<td style=min-width:50px>Ngày sinh</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>1</td>
+						<td style=min-width:50px>25</td>
+						<td style=min-width:50px>Nguyễn Thị </td>
+						<td style=min-width:50px>Lụa</td>
+						<td style=min-width:50px>01/01/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>2</td>
+						<td style=min-width:50px>28</td>
+						<td style=min-width:50px>Phạm Thị Thanh</td>
+						<td style=min-width:50px>Mai</td>
+						<td style=min-width:50px>04/01/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>3</td>
+						<td style=min-width:50px>12</td>
+						<td style=min-width:50px>Vũ Thị</td>
+						<td style=min-width:50px>Hoa</td>
+						<td style=min-width:50px>16/01/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>4</td>
+						<td style=min-width:50px>14</td>
+						<td style=min-width:50px>Đinh Thị Thu</td>
+						<td style=min-width:50px>Hòa</td>
+						<td style=min-width:50px>01/02/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>5</td>
+						<td style=min-width:50px>30</td>
+						<td style=min-width:50px>Lại Thị </td>
+						<td style=min-width:50px>Mến </td>
+						<td style=min-width:50px>06/02/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>6</td>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>Vũ Thị Hoài</td>
+						<td style=min-width:50px>Thu</td>
+						<td style=min-width:50px>24/02/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>7</td>
+						<td style=min-width:50px>20</td>
+						<td style=min-width:50px>Lại Thị </td>
+						<td style=min-width:50px>Kính</td>
+						<td style=min-width:50px>02/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>8</td>
+						<td style=min-width:50px>41</td>
+						<td style=min-width:50px>Nguyễn Thị Thu</td>
+						<td style=min-width:50px>Trang</td>
+						<td style=min-width:50px>16/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>9</td>
+						<td style=min-width:50px>9</td>
+						<td style=min-width:50px>Mai Thị </td>
+						<td style=min-width:50px>Hiền </td>
+						<td style=min-width:50px>17/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>10</td>
+						<td style=min-width:50px>16</td>
+						<td style=min-width:50px>Ngô Thị </td>
+						<td style=min-width:50px>Huyền </td>
+						<td style=min-width:50px>25/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>11</td>
+						<td style=min-width:50px>40</td>
+						<td style=min-width:50px>Đỗ Thị </td>
+						<td style=min-width:50px>Thủy</td>
+						<td style=min-width:50px>26/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>12</td>
+						<td style=min-width:50px>31</td>
+						<td style=min-width:50px>Trần Sơn</td>
+						<td style=min-width:50px>Nguyệt</td>
+						<td style=min-width:50px>29/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>13</td>
+						<td style=min-width:50px>37</td>
+						<td style=min-width:50px>Mai Đình</td>
+						<td style=min-width:50px>Phước</td>
+						<td style=min-width:50px>31/03/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>14</td>
+						<td style=min-width:50px>43</td>
+						<td style=min-width:50px>Ngô Ánh</td>
+						<td style=min-width:50px>Tuyết</td>
+						<td style=min-width:50px>01/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>15</td>
+						<td style=min-width:50px>22</td>
+						<td style=min-width:50px>Phạm Thùy</td>
+						<td style=min-width:50px>Linh</td>
+						<td style=min-width:50px>11/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>16</td>
+						<td style=min-width:50px>13</td>
+						<td style=min-width:50px>Đỗ Thị</td>
+						<td style=min-width:50px>Hòa</td>
+						<td style=min-width:50px>17/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>17</td>
+						<td style=min-width:50px>17</td>
+						<td style=min-width:50px>Nguyễn Thị Lan</td>
+						<td style=min-width:50px>Hương</td>
+						<td style=min-width:50px>22/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>18</td>
+						<td style=min-width:50px>42</td>
+						<td style=min-width:50px>Trần Thị </td>
+						<td style=min-width:50px>Trúc</td>
+						<td style=min-width:50px>22/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>19</td>
+						<td style=min-width:50px>11</td>
+						<td style=min-width:50px>Lương Thị </td>
+						<td style=min-width:50px>Hoa</td>
+						<td style=min-width:50px>28/04/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>20</td>
+						<td style=min-width:50px>33</td>
+						<td style=min-width:50px>Nguyễn Thảo</td>
+						<td style=min-width:50px>Nhi</td>
+						<td style=min-width:50px>25/05/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>21</td>
+						<td style=min-width:50px>32</td>
+						<td style=min-width:50px>Nguyễn Thị </td>
+						<td style=min-width:50px>Nhài</td>
+						<td style=min-width:50px>04/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>22</td>
+						<td style=min-width:50px>24</td>
+						<td style=min-width:50px>Nguyễn Thị Kim</td>
+						<td style=min-width:50px>Loan</td>
+						<td style=min-width:50px>07/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>23</td>
+						<td style=min-width:50px>4</td>
+						<td style=min-width:50px>Lương Thị</td>
+						<td style=min-width:50px>Duyên</td>
+						<td style=min-width:50px>19/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>24</td>
+						<td style=min-width:50px>5</td>
+						<td style=min-width:50px>Vũ Văn</td>
+						<td style=min-width:50px>Dương</td>
+						<td style=min-width:50px>23/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>25</td>
+						<td style=min-width:50px>27</td>
+						<td style=min-width:50px>Phạm Thị </td>
+						<td style=min-width:50px>Lý</td>
+						<td style=min-width:50px>24/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>26</td>
+						<td style=min-width:50px>18</td>
+						<td style=min-width:50px>Nguyễn Thu</td>
+						<td style=min-width:50px>Hường</td>
+						<td style=min-width:50px>26/06/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>27</td>
+						<td style=min-width:50px>35</td>
+						<td style=min-width:50px>Trần Thị Tuyết </td>
+						<td style=min-width:50px>Nhung</td>
+						<td style=min-width:50px>02/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>28</td>
+						<td style=min-width:50px>6</td>
+						<td style=min-width:50px>Phạm Thị Hương</td>
+						<td style=min-width:50px>Giang</td>
+						<td style=min-width:50px>03/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>29</td>
+						<td style=min-width:50px>19</td>
+						<td style=min-width:50px>Phạm Thu</td>
+						<td style=min-width:50px>Hường</td>
+						<td style=min-width:50px>07/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>30</td>
+						<td style=min-width:50px>34</td>
+						<td style=min-width:50px>Trần Thị Sâm</td>
+						<td style=min-width:50px>Nhung</td>
+						<td style=min-width:50px>11/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>31</td>
+						<td style=min-width:50px>26</td>
+						<td style=min-width:50px>Nguyễn Thị Ly</td>
+						<td style=min-width:50px>Ly</td>
+						<td style=min-width:50px>15/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>32</td>
+						<td style=min-width:50px>23</td>
+						<td style=min-width:50px>Vũ Thùy</td>
+						<td style=min-width:50px>Linh</td>
+						<td style=min-width:50px>24/07/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>33</td>
+						<td style=min-width:50px>36</td>
+						<td style=min-width:50px>Trần Tiến </td>
+						<td style=min-width:50px>Phát</td>
+						<td style=min-width:50px>06/08/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>34</td>
+						<td style=min-width:50px>1</td>
+						<td style=min-width:50px>Trần Thị Thu</td>
+						<td style=min-width:50px>Ánh</td>
+						<td style=min-width:50px>18/08/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>35</td>
+						<td style=min-width:50px>3</td>
+						<td style=min-width:50px>Phạm Thị</td>
+						<td style=min-width:50px>Dịu </td>
+						<td style=min-width:50px>18/08/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>36</td>
+						<td style=min-width:50px>7</td>
+						<td style=min-width:50px>Phạm Thị Thuý</td>
+						<td style=min-width:50px>Hằng</td>
+						<td style=min-width:50px>20/08/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>37</td>
+						<td style=min-width:50px>2</td>
+						<td style=min-width:50px>Trần Thị</td>
+						<td style=min-width:50px>Diện</td>
+						<td style=min-width:50px>09/09/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>38</td>
+						<td style=min-width:50px>8</td>
+						<td style=min-width:50px>Nguyễn Thanh</td>
+						<td style=min-width:50px>Hiền </td>
+						<td style=min-width:50px>13/09/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>39</td>
+						<td style=min-width:50px>38</td>
+						<td style=min-width:50px>Trần Thị Thuý </td>
+						<td style=min-width:50px>Quỳnh</td>
+						<td style=min-width:50px>16/09/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>40</td>
+						<td style=min-width:50px>15</td>
+						<td style=min-width:50px>Trần Thị Diệu</td>
+						<td style=min-width:50px>Huế</td>
+						<td style=min-width:50px>08/10/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>41</td>
+						<td style=min-width:50px>44</td>
+						<td style=min-width:50px>Phạm Tố</td>
+						<td style=min-width:50px>Uyên</td>
+						<td style=min-width:50px>22/10/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>42</td>
+						<td style=min-width:50px>21</td>
+						<td style=min-width:50px>Trần Thị Bích</td>
+						<td style=min-width:50px>Liên</td>
+						<td style=min-width:50px>29/10/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>43</td>
+						<td style=min-width:50px>29</td>
+						<td style=min-width:50px>Nguyễn Thị </td>
+						<td style=min-width:50px>Ngọc</td>
+						<td style=min-width:50px>25/11/1998</td>
+					</tr>
+					<tr>
+						<td style=min-width:50px>44</td>
+						<td style=min-width:50px>10</td>
+						<td style=min-width:50px>Nguyễn Thị </td>
+						<td style=min-width:50px>Hiền </td>
+						<td style=min-width:50px>31/12/1998</td>
+					</tr>
+				</table>
+
+			</div>
+		</div>
+	</div>
+
+	<div><hr></div>
+    <div class="text-center container-fluid" style="background-color: #f5f5dc;">
+    	<h3 class="text-center" style="font-family: 'Lobster', cursive;font-size: 40px;color: #ce7388;">12A13-HHA-K53</h3>
+    	<div><h4>© 2019 - Bản quyền thuộc về <a href="https://www.facebook.com/vuvan.duong.718">Vũ Dương</a></h4></div>
+    </div>
+	
+</body>
+</html>
